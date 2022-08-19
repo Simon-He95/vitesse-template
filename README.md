@@ -1,7 +1,7 @@
 # From
 [repo](https://github.com/dishait/vue3-exports)
 
-# vue3-exports
+# vitesse-template
 
 开箱即用的 `vite + vue3 + vitest + ts` 库模板，用来打包 `vue3` 的 `.vue` 组件与 `composition-api` 
 
