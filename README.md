@@ -105,12 +105,18 @@ export { useInc } from './composables/inc'
 export { default as Hello } from './components/Hello.vue'
 ```
 
+## Try it now!
 
-<br />
-<br />
+### GitHub Template
 
-## License
+[Create a repo from this template on GitHub](https://github.com/Simon-He95/vitesse-template/generate).
 
-Made with [name](https://github.com/name)
+### Clone to local
 
-Published under [MIT License](./LICENSE).
+If you prefer to do it manually with the cleaner git history
+
+```bash
+npx degit Simon-He95/vitesse-template my-vitesse-app
+cd my-vitesse-app
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+```
