@@ -1,18 +1,18 @@
 {
-  "name": "vitesse",
-  "version": "0.0.0",
-  "description": "vitesse",
+  "name": "@simon_he/test",
+  "version": "0.0.1",
+  "description": "@simon_he/test",
   "author": "Simon He",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git + git@github.com:Simon-He95/vitesse.git"
+    "url": "git + git@github.com:Simon-He95/@simon_he/test.git"
   },
   "bugs": {
-    "url": "https://github.com/Simon-He95/vitesse/issues"
+    "url": "https://github.com/Simon-He95/@simon_he/test/issues"
   },
   "keywords": [
-    "vitesse",
+    "@simon_he/test",
     "vue"
   ],
   "exports": {
