@@ -1,4 +1,6 @@
 import 'uno.css'
 import './index.css'
-export { useInc } from './composables/inc'
-export { default as Hello } from './components/Counter.vue'
+import { defineAsyncComponent } from 'vue'
+
+const Counter = defineAsyncComponent(() => import('./components/Counter.vue'))
+export { Counter }

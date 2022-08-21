@@ -48,7 +48,7 @@
 
 #### 注意 
 
-由于用到 `pnpm` 的 `workspace`，所以 `examples/vite/package.json` 也需要改 👇 
+- 由于用到 `pnpm` 的 `workspace`，所以 `examples/vite/package.json` 也需要改 👇 
 
 ```diff
 {
@@ -60,6 +60,8 @@
     ...
 }
 ```
+
+- exports打出来的css, 需要额外的去注入
 
 <br />
 
