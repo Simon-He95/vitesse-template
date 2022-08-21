@@ -31,7 +31,6 @@
   "scripts": {
     "dev": "vite --port 3333 --open",
     "test": "vitest",
-    "build-js": "vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test:ui": "vitest --ui",
@@ -40,6 +39,7 @@
     "prepublishOnly": "npm run build",
     "play": "pnpm run -C playground dev",
     "play:build": "pnpm run -C playground build",
+    "build-js": "vite build --emptyOutDir",
     "build-types": "vue-tsc -p tsconfig.build.json",
     "preview": "pnpm run -C playground preview",
     "build": "npm-run-all --parallel build-js build-types",
