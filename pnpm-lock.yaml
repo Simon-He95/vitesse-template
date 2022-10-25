@@ -48,7 +48,6 @@ importers:
       '@vueuse/core': ^8.1.1
       eslint: ^8.11.0
       jsdom: ^19.0.0
-      pnpm: ^6.32.3
       typescript: ^4.6.2
       unocss: ^0.29.2
       unplugin-auto-import: ^0.6.6
@@ -72,7 +71,6 @@ importers:
       '@vue/test-utils': 2.0.2_vue@3.2.37
       eslint: 8.22.0
       jsdom: 19.0.0
-      pnpm: 6.34.0
       typescript: 4.7.4
       unocss: 0.29.6
       unplugin-auto-import: 0.6.9_cjfb2vuyppa4z267klnp6hax3q
@@ -4457,12 +4455,6 @@ packages:
   /pluralize/8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
-    dev: true
-
-  /pnpm/6.34.0:
-    resolution: {integrity: sha512-K79DAT5WtGjrUyLtxAyehtN8uy5cXkzT1v+7RIJ3gygCffoLaLlBoG5gcfjfnX7oZH5rxznv/v8tlMIMfZyzTA==}
-    engines: {node: '>=12.17'}
-    hasBin: true
     dev: true
 
   /postcss-selector-parser/6.0.10:
