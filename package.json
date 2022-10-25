@@ -29,9 +29,6 @@
   "files": [
     "dist"
   ],
-  "engines": {
-    "node": ">=14.6"
-  },
   "scripts": {
     "dev": "vite --port 3333 --open",
     "test": "vitest",
