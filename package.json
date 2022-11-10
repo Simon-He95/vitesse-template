@@ -1,5 +1,5 @@
 {
-  "name": "@simon_he/test",
+  "name": "vitesse",
   "version": "0.0.1",
   "packageManager": "pnpm@7.6.0",
   "description": "@simon_he/test",
@@ -7,13 +7,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git + git@github.com:Simon-He95/@simon_he/test.git"
+    "url": "git + git@github.com:Simon-He95/vitesse.git"
   },
   "bugs": {
-    "url": "https://github.com/Simon-He95/@simon_he/test/issues"
+    "url": "https://github.com/Simon-He95/vitesse/issues"
   },
   "keywords": [
-    "@simon_he/test",
+    "vitesse",
     "vue"
   ],
   "exports": {
