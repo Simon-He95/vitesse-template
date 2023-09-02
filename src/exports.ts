@@ -1,6 +1,11 @@
-import 'uno.css'
-import './index.css'
-import { defineAsyncComponent } from 'vue'
+import Counter from './components/Counter.vue'
 
-const Counter = defineAsyncComponent(() => import('./components/Counter.vue'))
 export { Counter }
+
+export default Counter
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    Counter: typeof Counter
+  }
+}
