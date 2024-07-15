@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "jsx": "preserve",
     "target": "ES2017",
-    "module": "ESNext",
-    "declaration": true,
+    "jsx": "preserve",
     "lib": ["DOM", "ESNext"],
-    "skipLibCheck": true,
-    "isolatedModules": true,
+    "module": "ESNext",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true,
     "emitDeclarationOnly": true,
-    "resolveJsonModule": true
+    "outDir": "dist",
+    "isolatedModules": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "src/**/*.vue"],
   "exclude": ["node_modules", "dist"]

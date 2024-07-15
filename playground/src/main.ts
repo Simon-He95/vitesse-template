@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
-import Counter from '../../dist/index.mjs'
+import Counter from '../../dist/index.js'
 import App from './App.vue'
 
 import '@unocss/reset/tailwind.css'

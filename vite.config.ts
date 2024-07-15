@@ -7,7 +7,7 @@ import dts from 'vite-plugin-dts'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import Components from 'unplugin-vue-components/vite'
 import { ArcoResolver } from 'unplugin-vue-components/resolvers'
-import { vitePlugin as vitePluginInspectorLibCss } from 'unplugin-inspector-lib-css'
+import vitePluginInspectorLibCss from 'unplugin-inspector-lib-css/vite'
 import { name } from './package.json'
 
 // https://vitejs.dev/config/
