@@ -98,11 +98,11 @@ pnpm test:update # 单元测试(持续更新)
 在 `src/exports` 里导出即可
 
 ```ts
-// 导出 composition-api
-export { useInc } from './composables/inc'
-
 // 导出 .vue 组件
 export { default as Hello } from './components/Hello.vue'
+
+// 导出 composition-api
+export { useInc } from './composables/inc'
 ```
 
 ## Try it now!

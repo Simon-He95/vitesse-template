@@ -1,22 +1,20 @@
 /// <reference types="vitest" />
 
-import Unocss from 'unocss/vite'
 import Vue from '@vitejs/plugin-vue'
-import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
-import Components from 'unplugin-vue-components/vite'
-import { ArcoResolver } from 'unplugin-vue-components/resolvers'
+import Unocss from 'unocss/vite'
 import vitePluginInspectorLibCss from 'unplugin-inspector-lib-css/vite'
+import { ArcoResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
+import dts from 'vite-plugin-dts'
 import { name } from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const base = '/'
   let plugins = [
-    Vue({
-      reactivityTransform: true,
-    }),
+    Vue(),
     Components({
       resolvers: [
         ArcoResolver({
@@ -34,9 +32,7 @@ export default defineConfig(({ mode }) => {
 
   if (mode === 'npm') {
     plugins = [
-      Vue({
-        reactivityTransform: true,
-      }),
+      Vue(),
       cssInjectedByJsPlugin(),
       Unocss(),
       dts({
