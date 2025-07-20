@@ -1,29 +1,16 @@
+import Vue from '@vitejs/plugin-vue'
 /// <reference types="vitest" />
 
-import Vue from '@vitejs/plugin-vue'
-import Unocss from 'unocss/vite'
-import vitePluginInspectorLibCss from 'unplugin-inspector-lib-css/vite'
-import { ArcoResolver } from 'unplugin-vue-components/resolvers'
+import UnpluginClassExtractor from 'unplugin-class-extractor/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import dts from 'vite-plugin-dts'
 import { name } from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const base = '/'
-  let plugins = [
-    Vue(),
-    Components({
-      resolvers: [
-        ArcoResolver({
-          sideEffect: true,
-        }),
-      ],
-    }),
-    Unocss(),
-  ]
+  let plugins = [Vue(), Components()]
 
   let build: Record<string, any> = {
     target: 'es2015',
@@ -33,12 +20,13 @@ export default defineConfig(({ mode }) => {
   if (mode === 'npm') {
     plugins = [
       Vue(),
-      cssInjectedByJsPlugin(),
-      Unocss(),
       dts({
-        entryRoot: 'src/components',
+        outDir: 'dist/types',
       }),
-      vitePluginInspectorLibCss(),
+      UnpluginClassExtractor({
+        output: 'dist/tailwind.ts',
+        include: [/\/src\/components\/(?:[^/]+\/)*[^/]+\.vue(\?.*)?$/],
+      }) as any,
     ]
     build = {
       target: 'es2015',
@@ -46,12 +34,18 @@ export default defineConfig(({ mode }) => {
       copyPublicDir: false,
       lib: {
         entry: './src/exports.ts',
-        formats: ['cjs', 'es', 'umd'],
+        formats: ['cjs', 'es'],
         name,
         fileName: 'index',
       },
       rollupOptions: {
-        external: ['vue'],
+        external: [
+          'vue',
+          '@vueuse/core',
+          'class-variance-authority',
+          'clsx',
+          'tailwind-merge',
+        ],
         output: {
           globals: {
             vue: 'Vue',
@@ -66,5 +60,10 @@ export default defineConfig(({ mode }) => {
     base,
     plugins,
     build,
+    resolve: {
+      alias: {
+        '@': '/src',
+      },
+    },
   }
 })

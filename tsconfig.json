@@ -1,13 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ESNext",
     "jsx": "preserve",
     "lib": ["DOM", "ESNext"],
+    "baseUrl": ".",
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "resolveJsonModule": true,
+    "types": ["vite/client", "vue"],
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "exclude": ["dist", "playground", "cypress", "node_modules"]
+  "include": ["src/**/*", "./src/shims-vue.d.ts"],
+  "exclude": ["node_modules", "dist", "playground"]
 }
